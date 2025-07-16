@@ -12,7 +12,8 @@
     "lint": "esw ./",
     "lint:watch": "esw -w ./",
     "clean": "rimraf lib",
-    "start": "npm-run-all --parallel lint:watch dev",
+    "__start-old": "npm-run-all --parallel lint:watch dev",
+    "start": "npm run dev",
     "dev": "nodemon server.js --watch ./ --exec babel-node --presets es2015,stage-2",
     "prod": "babel-node server.js --presets es2015,stage-2",
     "doc": "jsdoc api -r -d doc/ --private --readme README.md"
